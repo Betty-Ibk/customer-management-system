@@ -1,0 +1,31 @@
+<h2>Customer List</h2>
+<div class="filter-container">
+  <input [(ngModel)]="filterText" (input)="filterList()" placeholder="Filter by name, email, or phone" />
+</div>
+
+<ul class="customer-list">
+  @for (customer of paginatedCustomers; track customer.id) {
+    <li>
+      <div class="customer-info">
+        <strong>{{ customer.name }}</strong>
+        <span>{{ customer.email }}</span>
+      </div>
+      <div class="action-buttons">
+        <button class="view-btn" (click)="viewDetails(customer.id)">View</button>
+        <button class="edit-btn" (click)="editCustomer(customer.id)">Edit</button>
+        <button class="delete-btn" (click)="deleteCustomer(customer.id)">Delete</button>
+      </div>
+    </li>
+  } @empty {
+    <li class="no-results">No customers found</li>
+  }
+</ul>
+
+<!-- Pagination controls -->
+<div class="pagination">
+  <button [disabled]="currentPage === 1" (click)="prevPage()" class="pagination-btn">Previous</button>
+  <span class="page-info">Page {{ currentPage }} of {{ totalPages }}</span>
+  <button [disabled]="currentPage === totalPages" (click)="nextPage()" class="pagination-btn">Next</button>
+</div>
+
+<button class="add-btn" [routerLink]="['/add']">Add New Customer</button>
