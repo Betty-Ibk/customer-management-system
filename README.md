@@ -1,59 +1,105 @@
-# CustomerApp
+# Customer Management System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+A modern, responsive web application for managing customer information, built with Angular.
 
-## Development server
+## Overview
 
-To start a local development server, run:
+This Customer Management System provides a comprehensive solution for businesses to manage their customer data efficiently. The application offers a clean, intuitive interface with features for viewing, adding, editing, and deleting customer records.
 
-```bash
-ng serve
+## Features
+
+- **Customer Dashboard**: View all customers with pagination support
+- **Search Functionality**: Filter customers by name, email, or phone number
+- **Customer Details**: View complete information for each customer
+- **Add/Edit Forms**: Create new customer records or update existing ones
+- **Delete Confirmation**: Secure deletion with confirmation dialog
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+
+## Technology Stack
+
+- **Frontend Framework**: Angular 19.2.10
+- **Styling**: Custom CSS with responsive design
+- **State Management**: Angular services
+- **Routing**: Angular Router for navigation between views
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/customer-management-system.git
+   cd customer-management-system
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   ng serve
+   ```
+
+4. Open your browser and navigate to `http://localhost:4200/`
+
+## Usage
+
+### Managing Customers
+
+- **View Customers**: The home page displays a paginated list of all customers
+- **Search**: Use the search box to filter customers by name, email, or phone
+- **View Details**: Click the "View" button to see complete customer information
+- **Edit Customer**: Click the "Edit" button to modify customer details
+- **Delete Customer**: Click the "Delete" button and confirm to remove a customer
+- **Add Customer**: Click the "Add New Customer" button to create a new record
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── customer-list/
+│   │   ├── customer-detail/
+│   │   ├── customer-form/
+│   │   ├── header/
+│   │   └── dialog/
+│   ├── services/
+│   │   ├── customer.service.ts
+│   │   └── dialog.service.ts
+│   ├── app.component.ts
+│   ├── app.routes.ts
+│   └── customer.model.ts
+├── assets/
+└── styles.css
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Development
 
-## Code scaffolding
+### Code Scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Run `ng generate component component-name` to generate a new component.
 
-```bash
-ng generate component component-name
-```
+### Building for Production
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-```bash
-ng generate --help
-```
+### Running Tests
 
-## Building
+Run `ng test` to execute the unit tests via Karma.
 
-To build the project run:
+## License
 
-```bash
-ng build
-```
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Acknowledgments
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Angular team for the excellent framework
+- All contributors who have helped improve this project
